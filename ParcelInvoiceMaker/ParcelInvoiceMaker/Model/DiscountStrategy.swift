@@ -19,19 +19,19 @@ struct NoDiscount: DiscountStrategy {
     
 struct VIPDiscount: DiscountStrategy {
     func applyDiscount(deliveryCost: Int) -> Int {
-        deliveryCost.calculateCost(by: Discount.vipDiscountRatio)
+        deliveryCost.calculateCost(by: CostInfomation.vipDiscountRatio)
     }
 }
 
 struct CouponDiscount: DiscountStrategy {
     func applyDiscount(deliveryCost: Int) -> Int {
-        deliveryCost.calculateCost(by: Discount.couponDiscountRatio)
+        deliveryCost.calculateCost(by: CostInfomation.couponDiscountRatio)
     }
 }
 
 struct MistakeCompensationDiscount: DiscountStrategy {
     func applyDiscount(deliveryCost: Int) -> Int {
-        deliveryCost.calculateCost(by: Discount.mistakeCompensationDiscountRatio)
+        deliveryCost.calculateCost(by: CostInfomation.mistakeCompensationDiscountRatio)
     }
 }
 
